@@ -16,6 +16,7 @@ BuildRequires:	perl-NetAddr-IP
 BuildRequires:	perl-Net-DNS
 BuildRequires:	perl-Net-DNS-Resolver-Programmable
 BuildRequires:	perl-URI
+BuildRequires:	perl-version
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
