@@ -17,6 +17,7 @@ BuildRequires:	perl-Net-DNS
 BuildRequires:	perl-Net-DNS-Resolver-Programmable
 BuildRequires:	perl-URI
 BuildRequires:	perl-version
+BuildRequires:	perl-YAML
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
