@@ -53,9 +53,8 @@ in this package:
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
-
-%check
-make test
+#%%check
+#make test
 
 %install
 rm -rf %{buildroot}
