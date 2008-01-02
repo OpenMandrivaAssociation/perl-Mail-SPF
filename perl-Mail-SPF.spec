@@ -20,6 +20,7 @@ BuildRequires:	perl-version
 BuildRequires:	perl-YAML
 BuildRequires:	perl-Test-Pod
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Mail::SPF is an object-oriented Perl implementation of the Sender Policy
