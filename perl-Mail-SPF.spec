@@ -1,26 +1,29 @@
-%define real_name Mail-SPF
+%define upstream_name    Mail-SPF
+%define upstream_version 2.007
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
-Name:		perl-%{real_name}
-Version:	2.006
-Release:	%mkrel 2
 License:	BSD
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JM/JMEHNLE/mail-spf/%{real_name}-v%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/J/JM/JMEHNLE/mail-spf/%{upstream_name}-v%{upstream_version}.tar.gz
+
 BuildRequires:	perl-Error
 BuildRequires:	perl-Mail-SPF-Test
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-NetAddr-IP
 BuildRequires:	perl-Net-DNS
 BuildRequires:	perl-Net-DNS-Resolver-Programmable
-BuildRequires:	perl-URI
-BuildRequires:	perl-version
-BuildRequires:	perl-YAML
 BuildRequires:	perl-Test-Pod
+BuildRequires:	perl-URI
+BuildRequires:	perl-YAML
+BuildRequires:	perl-version
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Mail::SPF is an object-oriented Perl implementation of the Sender Policy
@@ -46,8 +49,7 @@ in this package:
  * mail-spfd:      A daemon for services that perform SPF checks frequently.
 
 %prep
-
-%setup -q -n %{real_name}-v%{version}
+%setup -q -n %{upstream_name}-v%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
