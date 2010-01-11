@@ -3,25 +3,23 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
 License:	BSD
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/J/JM/JMEHNLE/mail-spf/%{upstream_name}-v%{upstream_version}.tar.gz
-
-BuildRequires:	perl-Error
-BuildRequires:	perl-Mail-SPF-Test
-BuildRequires:	perl-Module-Build
-BuildRequires:	perl-NetAddr-IP
-BuildRequires:	perl-Net-DNS
-BuildRequires:	perl-Net-DNS-Resolver-Programmable
-BuildRequires:	perl-Test-Pod
-BuildRequires:	perl-URI
-BuildRequires:	perl-YAML
+Source:     http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-v%{upstream_version}.tar.gz
+BuildRequires:	perl(Error)
+BuildRequires:	perl(Mail::SPF::Test)
+BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(NetAddr::IP)
+BuildRequires:	perl(Net::DNS)
+BuildRequires:	perl(Net::DNS::Resolver::Programmable)
+BuildRequires:	perl(Test::Pod)
+BuildRequires:	perl(URI)
+BuildRequires:	perl(YAML)
 BuildRequires:	perl-version
-
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -52,16 +50,15 @@ in this package:
 %setup -q -n %{upstream_name}-v%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 #%%check
-#make test
+#./Build test
 
 %install
 rm -rf %{buildroot}
-
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 # fix file clash with perl-Mail-SPF-Query
 mv %{buildroot}%{_bindir}/spfquery %{buildroot}%{_bindir}/mail-spfquery
