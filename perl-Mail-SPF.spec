@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
 License:	BSD
@@ -20,6 +20,7 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(URI)
 BuildRequires:	perl(YAML)
 BuildRequires:	perl-version
+Obsoletes:	perl-Mail-SPF-Query
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
