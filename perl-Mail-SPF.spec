@@ -1,9 +1,9 @@
 %define upstream_name    Mail-SPF
-%define upstream_version 2.007
+%define upstream_version 2.8.0
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 6
+Release:    1
 
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
 License:	BSD
@@ -20,9 +20,7 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(URI)
 BuildRequires:	perl(YAML)
 BuildRequires:	perl-version
-Obsoletes:	perl-Mail-SPF-Query
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Mail::SPF is an object-oriented Perl implementation of the Sender Policy
@@ -36,8 +34,6 @@ described in RFC 4407.)
 %package -n	spf-tools
 Summary:	SPF tools (spfquery, spfd) based on the Mail::SPF Perl module
 Group:		Development/Perl
-#Obsoletes:	perl-Mail-SPF-Query
-#Provides:	perl-Mail-SPF-Query = %{version}-%{release}
 
 %description -n	spf-tools
 A collection of Sender Policy Framework (SPF) tools that are based on the
