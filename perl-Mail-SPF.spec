@@ -1,10 +1,11 @@
 %define modname	Mail-SPF
-%define modver	2.8.0
+%define modver 2.9.0
 
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	1
 License:	BSD
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -32,6 +33,7 @@ described in RFC 4407.)
 
 %package -n	spf-tools
 Summary:	SPF tools (spfquery, spfd) based on the Mail::SPF Perl module
+
 Group:		Development/Perl
 
 %description -n	spf-tools
@@ -74,4 +76,5 @@ mv %{buildroot}%{_mandir}/man1/spfquery.1 %{buildroot}%{_mandir}/man1/mail-spfqu
 %{_bindir}/mail-spfquery
 %{_sbindir}/mail-spfd
 %{_mandir}/man1/mail-spfquery.1*
+
 
