@@ -5,7 +5,7 @@ Summary:	Perl implementation of Sender Policy Framework and Sender ID
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	1
 License:	BSD
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -76,5 +76,3 @@ mv %{buildroot}%{_mandir}/man1/spfquery.1 %{buildroot}%{_mandir}/man1/mail-spfqu
 %{_bindir}/mail-spfquery
 %{_sbindir}/mail-spfd
 %{_mandir}/man1/mail-spfquery.1*
-
-
