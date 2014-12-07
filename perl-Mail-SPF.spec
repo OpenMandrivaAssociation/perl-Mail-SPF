@@ -5,7 +5,7 @@ Summary:	Perl implementation of Sender Policy Framework and Sender ID
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
