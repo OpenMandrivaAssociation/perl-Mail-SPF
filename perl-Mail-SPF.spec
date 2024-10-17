@@ -8,7 +8,7 @@ Version:	%perl_convert_version %{modver}
 Release:	8
 License:	BSD
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-v%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:  perl-devel
