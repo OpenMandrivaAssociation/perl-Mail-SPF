@@ -1,15 +1,13 @@
 %define modname	Mail-SPF
-%define modver 2.9.0
-
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	8
+Version:	2.9.0
+Release:	9
 License:	BSD
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-v%{modver}.tar.gz
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-v%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:  perl-devel
 BuildRequires:	perl(Error)
@@ -46,7 +44,7 @@ in this package:
  * mail-spfd:	A daemon for services that perform SPF checks frequently.
 
 %prep
-%setup -qn %{modname}-v%{modver}
+%setup -qn %{modname}-v%{version}
 
 %build
 %__perl Build.PL installdirs=vendor
