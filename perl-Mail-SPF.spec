@@ -2,8 +2,8 @@
 Summary:	Perl implementation of Sender Policy Framework and Sender ID
 
 Name:		perl-%{modname}
-Version:	2.9.0
-Release:	9
+Version:	3.20260331
+Release:	1
 License:	BSD
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
