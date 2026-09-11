@@ -7,7 +7,7 @@ Release:	1
 License:	BSD
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-v%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Mail-SPF-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:  perl-devel
 BuildRequires:	perl(Error)
@@ -44,7 +44,7 @@ in this package:
  * mail-spfd:	A daemon for services that perform SPF checks frequently.
 
 %prep
-%setup -qn %{modname}-v%{version}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Build.PL installdirs=vendor
